@@ -2,9 +2,13 @@
   "name": "PixelPainter",
   "version": "1.0.0",
   "description": "PixelPainter ============",
-  "main": "gulpfile.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm run build -- --watch",
+    "build": "webpack-dev-server --entry ./src/app.js --module-bind 'js=babel' --content-base public",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
