@@ -84,13 +84,14 @@ function addAttributes(element, attributes){
   }
 }
 
-function sanityCheck () {
-  console.log("sanity check!");
-}
+function createReset() {
+  var resetButton = document.createElement("button");
 
+}
 // Color Picker
 var colorPicker = document.getElementById("left-side");
 colorPicker.appendChild(createGrid(5, 5));
+colorPicker.appendChild();
 var pickerColumns = colorPicker.querySelectorAll(".column");
 var pickerOptions = {
   class: "column",
@@ -134,14 +135,12 @@ function mouseIsUp() {
   mouseDown = 0;
 }
 function color(event) {
-  //sanityCheck();
   if(mouseDown === 1) {
     event.target.style.backgroundColor = paintColor;
   }
 }
 
 function stopColoring(event) {
-  //sanityCheck();
   //event.target.style.backgroundColor = "white";
   event.target.onmousemove = null;
 }
