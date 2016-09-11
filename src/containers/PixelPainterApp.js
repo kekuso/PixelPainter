@@ -20,9 +20,11 @@ class PixelPainterApp extends React.Component {
     return (
       <div className="pixelPainterContainer">
         <h1>Welcome to Pixel Painter</h1>
-        <Pallet>
+        <Pallet
+          palletArray={this.props.pallet.colors}>
         </Pallet>
-        <Canvas>
+        <Canvas
+          canvasArray={this.props.canvas.colors}>
         </Canvas>
       </div>
     );
