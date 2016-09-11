@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import store from './reducers';
-const PixelPainter = React.createClass({
-  render: function () {
-    return (
-      <div className="mainContainer">
-        <h1> Pixel Painter </h1>
-      </div>
-    );
-  }
-})
+import store from './reducers';
+import { PixelPainterApp } from './containers';
+import { Provider } from 'react-redux';
+
 ReactDOM.render(
-  <PixelPainter url = "/" pollInterval = {2000}/>,
+  <Provider
+    store={store}
+  >
+    <PixelPainterApp />
+  </Provider>,
   document.getElementById('app')
 );
+
+export { default as PixelPainterApp } from './containers/PixelPainterApp';

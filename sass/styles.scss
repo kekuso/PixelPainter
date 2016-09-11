@@ -2,47 +2,50 @@
 @import "sass/partials/_reset.scss";
 @import "sass/partials/_clearfix.scss";
 
-.column {
-    height: 30px;
-    width: 30px;
-    background-color: white;
-    display: inline-block;
-    border-style: solid;
-    border-width: thin;
-}
-
 body {
   display: flex;
-  font-size: 0;
+  font-size: 16px;
 }
 
 h1{
-  font-size: 50px;
+  font-size: 3.125em;
 }
 
-/*body > div {
+.pixel {
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  background-color: green;
+}
+
+.palletTable {
+  display: table;
+  // width: auto;
+  // border-spacing: 5px;
+  background-color: white;
+  // width: 80%;
+  margin-left: 10px;
+  padding: 0px;
+}
+
+.canvasTable {
+  display: table;
+  // width: auto;
+  // border-spacing: 5px;
+  background-color: white;
+  // width: 80%;
+  margin-left: 10px;
+  padding: 0px;
+}
+
+.row {
+  display: table-row;
+}
+
+.col {
+  box-sizing: border-box;
+  display: table-column;
   display: inline-block;
-  padding: 1em;
-}*/
-#left_side {
-    width:35%;
-    height:50%;
-    display:inline-block;
-    margin:0;
-    padding:0;
-}
-
-#middle-space {
-    width:15%;
-    height:100%;
-    display:inline-block;
-    margin:0;
-    padding:0;
-}
-#right_side {
-    width:40%;
-    height:100%;
-    display:inline-block;
-    margin:0;
-    padding:0;
+  height: 35px;
+  width: 35px;
 }
