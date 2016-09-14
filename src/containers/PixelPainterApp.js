@@ -15,8 +15,8 @@ class PixelPainterApp extends React.Component {
 
   }
   render() {
-    console.log("App props: ");
-    console.log(this.props);
+    // console.log("App props: ");
+    // console.log(this.props.pallet.colors);
     return (
       <div className="pixelPainterContainer">
         <h1>Welcome to Pixel Painter</h1>

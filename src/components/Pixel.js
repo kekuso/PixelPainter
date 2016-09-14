@@ -1,8 +1,12 @@
 import React from 'react';
 
 class Pixel extends React.Component {
+  constructor (props) {
+    super(props);
+  }
   render () {
-    // console.log(this.props);
+    console.log("Pixel color: ");
+    console.log(this.props);
     return (
       <div className="pixelContainer">
         <div

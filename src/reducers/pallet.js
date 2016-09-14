@@ -4,10 +4,16 @@ for(let i = 0; i < 25; i++) {
   colorArray.push(colorRandom());
 }
 
+const colorTable = [];
+while(colorArray.length) {
+  colorTable.push(colorArray.splice(0, 5));
+}
+
+//console.log("color table: " + colorTable);
 const currColor = '#ffffff';
 
 const initialState = {
-  colors: colorArray,
+  colors: colorTable,
   selected: currColor
 };
 
