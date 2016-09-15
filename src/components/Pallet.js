@@ -11,6 +11,7 @@ class Pallet extends React.Component {
     console.log(this.props.palletArray);
     return (
       <div className="palletContainer">
+        <h3>Pallet</h3>
         <table className="palletTable">
           <tbody>
             {this.props.palletArray.map(function (row, i) {

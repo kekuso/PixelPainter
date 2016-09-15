@@ -17,54 +17,24 @@ class Canvas extends React.Component {
     return (
       <div className="canvasContainer">
         <h3>Canvas</h3>
-
-        <div className="canvasTable">
-          <div className="row">
-            <div className="col">
-              <Pixel
-                handleClick={() => this.setColor(0, 0, 'black')}
-                color="black"
-              >
-              </Pixel>
-            </div>
-            <div className="col">
-              <Pixel>
-              </Pixel>
-            </div>
-            <div className="col">
-              <Pixel>
-              </Pixel>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col">
-              <Pixel>
-              </Pixel>
-            </div>
-            <div className="col">
-              <Pixel>
-              </Pixel>
-            </div>
-            <div className="col">
-              <Pixel>
-              </Pixel>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col">
-              <Pixel>
-              </Pixel>
-            </div>
-            <div className="col">
-              <Pixel>
-              </Pixel>
-            </div>
-            <div className="col">
-              <Pixel>
-              </Pixel>
-            </div>
-          </div>
-        </div>
+        <table className="canvasTable">
+          <tbody>
+            {this.props.canvasArray.map(function (row, i) {
+              console.log("row: " + row);
+              return (
+                <tr key={i}>
+                  {row.map(function(col, j) {
+                    return <td key={j}>
+                      <Pixel
+                        color={col}
+                      />
+                    </td>;
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
     );
   }
