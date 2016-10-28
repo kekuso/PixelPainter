@@ -9,8 +9,7 @@ while(colorArray.length) {
   colorTable.push(colorArray.splice(0, 5));
 }
 
-//console.log("color table: " + colorTable);
-const currColor = '#ffffff';
+const currColor = 'cyan';
 
 const initialState = {
   colors: colorTable,

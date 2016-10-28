@@ -22,6 +22,7 @@ class Pallet extends React.Component {
                     return <td key={j}>
                       <Pixel
                         color={col}
+
                       />
                     </td>;
                   })}

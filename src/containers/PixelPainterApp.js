@@ -21,10 +21,12 @@ class PixelPainterApp extends React.Component {
       <div className="pixelPainterContainer">
         <h1>Welcome to Pixel Painter</h1>
         <Pallet
-          palletArray={this.props.pallet.colors}>
+          palletArray={this.props.pallet.colors}
+          selectedColor={this.props.selected}>
         </Pallet>
         <Canvas
-          canvasArray={this.props.canvas.colors}>
+          canvasArray={this.props.canvas.colors}
+          selectedColor={this.props.selected}>
         </Canvas>
       </div>
     );

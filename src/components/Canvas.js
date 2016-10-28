@@ -9,7 +9,7 @@ class Canvas extends React.Component {
     this.setColor = this.setColor.bind(this);
   }
   setColor (x = 0, y = 0, color) {
-    let newColor = 'black';
+    let newColor = color;
     this.props.setColor(0, 0, newColor);
   }
 
@@ -27,6 +27,7 @@ class Canvas extends React.Component {
                     return <td key={j}>
                       <Pixel
                         color={col}
+                        handleClick={() => this.setColor(0, 0, 'black')}
                       />
                     </td>;
                   })}
